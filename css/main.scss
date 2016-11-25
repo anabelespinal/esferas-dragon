@@ -1,0 +1,89 @@
+@import "_variables";
+@import "_esfera";
+@import "_mixin";
+
+* {
+	box-sizing : border-box;
+}
+
+.container {
+	.esfera{
+		background: $color-esfera;
+		border-radius: $base-tamanio-esfera;
+		padding: $base-tamanio-esfera/4;
+		@include medidas($base-tamanio-esfera);
+
+		.star-five{
+			display: inline-block !important;
+		}
+
+	}
+	.esfera-1{
+		@include medidas($base-tamanio-esfera*1.1);
+		@include star(15px);
+
+		div[esfera="1"]{
+			@include posicion-esferas($relativo, $top, $left);
+		}
+	}
+	.esfera-2{
+		@include medidas($base-tamanio-esfera*1.1);
+		@include star(15px);
+
+		div[esfera="2"]{
+			@include posicion-esferas($relativo, $top, $left - 15);
+		}
+	}
+	.esfera-3{
+		@include medidas($base-tamanio-esfera*1.1);
+		@include star(15px);
+
+		div[esfera="3"]:first-child{
+			@include posicion-esferas($relativo, $top*0, $left);
+		}
+		div[esfera="3"]:nth-child(2){
+			@include posicion-esferas($relativo, $top*2, $left - 10);
+		}
+		div[esfera="3"]:nth-child(3){
+			@include posicion-esferas($relativo, $top, $left*0);
+		}
+	}
+	.esfera-4{
+		@include medidas($base-tamanio-esfera*1.1);
+		@include star(15px);
+
+		div[esfera="4"]{
+			@include posicion-esferas($relativo, $top - 17, $left - 20);
+		}
+	}
+	.esfera-5{
+		@include medidas($base-tamanio-esfera*1.1);
+		@include star(15px);
+
+		div[esfera="5"]{
+			@include posicion-esferas($relativo, $top - 25, $left - 20);
+		}
+		div[esfera="5"]:nth-child(5){
+			@include posicion-esferas($relativo, $top*0, $left);
+		}
+	}
+	.esfera-6{
+		@include medidas($base-tamanio-esfera*1.1);
+		@include star(15px);
+
+		div[esfera="6"]{
+			@include posicion-esferas($relativo, $top*0, $left - 15);
+		}
+	}
+	.esfera-7{
+		@include medidas($base-tamanio-esfera*1.1);
+		@include star(15px);
+
+		div[esfera="7"]{
+			@include posicion-esferas($relativo, $top - 40, $left - 18);
+		}
+		div[esfera="7"]:last-child{
+			@include posicion-esferas($relativo, $top*0 - 10, $left);
+		}
+	}
+}

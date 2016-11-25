@@ -1,0 +1,10 @@
+@mixin medidas($medida){
+	height: $medida;
+	width: $medida;
+}
+
+@mixin posicion-esferas($relativo, $top, $left){
+		position: $relativo;
+		top: $top;
+		left: $left;
+}
