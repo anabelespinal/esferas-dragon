@@ -16,7 +16,5 @@
 	rigth: $rigth;
 }
 @mixin shadow-borde(){
-	-webkit-box-shadow: -1px 0px 70px 17px rgba(240,163,31,1);
-	-moz-box-shadow: -1px 0px 70px 17px rgba(240,163,31,1);
-	box-shadow: -1px 0px 70px 17px rgba(240,163,31,1);
+	box-shadow: -1px 6px 90px 17px rgba(255,177,9, 0.7);
 }

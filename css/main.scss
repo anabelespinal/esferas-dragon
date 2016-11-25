@@ -12,15 +12,18 @@
   to { transform: none; }
 }
 
+body{
+	background: url("../img/dragon.jpg");
+	background-repeat: no-repeat;
+}
 .container {
 		.brillo{
 			display: inline-block !important;
 	    border-radius: 200%;
-	    padding: 5px;
 	    animation: latidos 2.6s infinite;
 	    @include shadow-borde;
-			.esfera{
-				background: $color-esfera;
+			.esfera{ 
+		    background:$color-esfera;
 				border-radius: $base-tamanio-esfera;
 				padding: $base-tamanio-esfera/4;
 				display: inline-block;
