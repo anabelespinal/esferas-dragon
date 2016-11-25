@@ -3,7 +3,7 @@
 	width: $medida;
 }
 
-@mixin posicion-esferas($relativo, $top, $left){
+@mixin posicion-estrellas($relativo, $top, $left){
 		position: $relativo;
 		top: $top;
 		left: $left;
@@ -14,4 +14,9 @@
 	left: $left0;
 	bottom: $bottom; 
 	rigth: $rigth;
+}
+@mixin shadow-borde(){
+	-webkit-box-shadow: -1px 0px 70px 17px rgba(240,163,31,1);
+	-moz-box-shadow: -1px 0px 70px 17px rgba(240,163,31,1);
+	box-shadow: -1px 0px 70px 17px rgba(240,163,31,1);
 }

@@ -6,93 +6,119 @@
 	box-sizing : border-box;
 }
 
+@keyframes latidos {
+  from { transform: none; }
+  50% { transform: scale(0.9); }
+  to { transform: none; }
+}
+
 .container {
-	.esfera{
-		background: $color-esfera;
-		border-radius: $base-tamanio-esfera;
-		padding: $base-tamanio-esfera/4;
-		display: inline-block;
-		@include medidas($base-tamanio-esfera);
-
-		.star-five{
+		.brillo{
 			display: inline-block !important;
-		}
+	    border-radius: 200%;
+	    padding: 5px;
+	    animation: latidos 2.6s infinite;
+	    @include shadow-borde;
+			.esfera{
+				background: $color-esfera;
+				border-radius: $base-tamanio-esfera;
+				padding: $base-tamanio-esfera/4;
+				display: inline-block;
+				animation: latidos 1.9s infinite;
+				@include shadow-borde;
 
-	}
-	.esfera-1{
-		@include medidas($base-tamanio-esfera*1.1);
-		@include star(15px);
-
-		div[esfera="1"]{
-			@include posicion-esferas($relativo, $top, $left);
+				@include medidas($base-tamanio-esfera);
+				.star-five{
+					display: inline-block !important;
+				}
+			}
 		}
+	div[class="brillo"]:first-child{
 		@include orden-esfera($top0 + 370, $left0 + 500, $bottom, $rigth);
-	}
-	.esfera-2{
-		@include medidas($base-tamanio-esfera*1.1);
-		@include star(15px);
+		.esfera-1{
+			@include medidas($base-tamanio-esfera*1.1);
+			@include star(15px);
 
-		div[esfera="2"]{
-			@include posicion-esferas($relativo, $top, $left - 15);
+			div[esfera="1"]{
+				@include posicion-estrellas($relativo, $top, $left);
+			}
 		}
-		@include posicion-esferas($relativo, $top*2, $left - 10);
+	}
+	div[class="brillo"]:nth-child(2){
 		@include orden-esfera($top0 + 210, $left0 + 200, $bottom, $rigth);
+		.esfera-2{
+			@include medidas($base-tamanio-esfera*1.1);
+			@include star(15px);
+			div[esfera="2"]{
+				@include posicion-estrellas($relativo, $top, $left - 15);
+			}
+		}
 	}
-	.esfera-3{
-		@include medidas($base-tamanio-esfera*1.1);
-		@include star(15px);
-
-		div[esfera="3"]:first-child{
-			@include posicion-esferas($relativo, $top*0, $left);
-		}
-		div[esfera="3"]:nth-child(2){
-			@include posicion-esferas($relativo, $top*2, $left - 10);
-		}
-		div[esfera="3"]:nth-child(3){
-			@include posicion-esferas($relativo, $top, $left*0);
-		}
+	div[class="brillo"]:nth-child(3){
 		@include orden-esfera($top0 + 40, $left0 + 90, $bottom, $rigth);
-	}
-	.esfera-4{
-		@include medidas($base-tamanio-esfera*1.1);
-		@include star(15px);
+		.esfera-3{
+			@include medidas($base-tamanio-esfera*1.1);
+			@include star(15px);
 
-		div[esfera="4"]{
-			@include posicion-esferas($relativo, $top - 17, $left - 20);
+			div[esfera="3"]:first-child{
+				@include posicion-estrellas($relativo, $top*0, $left);
+			}
+			div[esfera="3"]:nth-child(2){
+				@include posicion-estrellas($relativo, $top + 12, $left);
+			}
+			div[esfera="3"]:nth-child(3){
+				@include posicion-estrellas($relativo, $top*0 + 13, $left*0);
+			}
 		}
-		@include orden-esfera($top0 - 50, $left0 + 130, $bottom, $rigth)
 	}
-	.esfera-5{
-		@include medidas($base-tamanio-esfera*1.1);
-		@include star(15px);
+	div[class="brillo"]:nth-child(4){
+		@include orden-esfera($top0, $left0 + 130, $bottom, $rigth);
+		.esfera-4{
+			@include medidas($base-tamanio-esfera*1.1);
+			@include star(15px);
 
-		div[esfera="5"]{
-			@include posicion-esferas($relativo, $top - 25, $left - 20);
+			div[esfera="4"]{
+				@include posicion-estrellas($relativo, $top - 15, $left - 19);
+			}
 		}
-		div[esfera="5"]:nth-child(5){
-			@include posicion-esferas($relativo, $top*0, $left);
-		}
+	}
+	div[class="brillo"]:nth-child(5){
 		@include orden-esfera($top0 + 60, $left0 + 170, $bottom, $rigth);
-	}
-	.esfera-6{
-		@include medidas($base-tamanio-esfera*1.1);
-		@include star(15px);
+		.esfera-5{
+			@include medidas($base-tamanio-esfera*1.1);
+			@include star(15px);
 
-		div[esfera="6"]{
-			@include posicion-esferas($relativo, $top*0, $left - 15);
+			div[esfera="5"]{
+				@include posicion-estrellas($relativo, $top - 25, $left - 20);
+			}
+			div[esfera="5"]:nth-child(5){
+				@include posicion-estrellas($relativo, $top*0, $left);
+			}
 		}
+	}
+	div[class="brillo"]:nth-child(6){
 		@include orden-esfera($top0 + 260, $left0 + 90, $bottom, $rigth);
-	}
-	.esfera-7{
-		@include medidas($base-tamanio-esfera*1.1);
-		@include star(15px);
+		.esfera-6{
+			@include medidas($base-tamanio-esfera*1.1);
+			@include star(15px);
 
-		div[esfera="7"]{
-			@include posicion-esferas($relativo, $top - 40, $left - 18);
+			div[esfera="6"]{
+				@include posicion-estrellas($relativo, $top*0, $left - 18);
+			}
 		}
-		div[esfera="7"]:last-child{
-			@include posicion-esferas($relativo, $top*0 - 10, $left);
-		}
+	}
+	div[class="brillo"]:nth-child(7){
 		@include orden-esfera($top0 + 460, $left0 - 200, $bottom, $rigth);
+		.esfera-7{
+			@include medidas($base-tamanio-esfera*1.1);
+			@include star(15px);
+
+			div[esfera="7"]{
+				@include posicion-estrellas($relativo, $top - 40, $left - 18);
+			}
+			div[esfera="7"]:last-child{
+				@include posicion-estrellas($relativo, $top*0 - 10, $left);
+			}
+		}
 	}
 }
