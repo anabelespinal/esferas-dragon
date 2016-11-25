@@ -11,6 +11,7 @@
 		background: $color-esfera;
 		border-radius: $base-tamanio-esfera;
 		padding: $base-tamanio-esfera/4;
+		display: inline-block;
 		@include medidas($base-tamanio-esfera);
 
 		.star-five{
@@ -25,6 +26,7 @@
 		div[esfera="1"]{
 			@include posicion-esferas($relativo, $top, $left);
 		}
+		@include orden-esfera($top0 + 370, $left0 + 500, $bottom, $rigth);
 	}
 	.esfera-2{
 		@include medidas($base-tamanio-esfera*1.1);
@@ -33,6 +35,8 @@
 		div[esfera="2"]{
 			@include posicion-esferas($relativo, $top, $left - 15);
 		}
+		@include posicion-esferas($relativo, $top*2, $left - 10);
+		@include orden-esfera($top0 + 210, $left0 + 200, $bottom, $rigth);
 	}
 	.esfera-3{
 		@include medidas($base-tamanio-esfera*1.1);
@@ -47,6 +51,7 @@
 		div[esfera="3"]:nth-child(3){
 			@include posicion-esferas($relativo, $top, $left*0);
 		}
+		@include orden-esfera($top0 + 40, $left0 + 90, $bottom, $rigth);
 	}
 	.esfera-4{
 		@include medidas($base-tamanio-esfera*1.1);
@@ -55,6 +60,7 @@
 		div[esfera="4"]{
 			@include posicion-esferas($relativo, $top - 17, $left - 20);
 		}
+		@include orden-esfera($top0 - 50, $left0 + 130, $bottom, $rigth)
 	}
 	.esfera-5{
 		@include medidas($base-tamanio-esfera*1.1);
@@ -66,6 +72,7 @@
 		div[esfera="5"]:nth-child(5){
 			@include posicion-esferas($relativo, $top*0, $left);
 		}
+		@include orden-esfera($top0 + 60, $left0 + 170, $bottom, $rigth);
 	}
 	.esfera-6{
 		@include medidas($base-tamanio-esfera*1.1);
@@ -74,6 +81,7 @@
 		div[esfera="6"]{
 			@include posicion-esferas($relativo, $top*0, $left - 15);
 		}
+		@include orden-esfera($top0 + 260, $left0 + 90, $bottom, $rigth);
 	}
 	.esfera-7{
 		@include medidas($base-tamanio-esfera*1.1);
@@ -85,5 +93,6 @@
 		div[esfera="7"]:last-child{
 			@include posicion-esferas($relativo, $top*0 - 10, $left);
 		}
+		@include orden-esfera($top0 + 460, $left0 - 200, $bottom, $rigth);
 	}
 }

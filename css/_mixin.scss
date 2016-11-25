@@ -8,3 +8,10 @@
 		top: $top;
 		left: $left;
 }
+@mixin orden-esfera($top0, $left0, $bottom, $rigth){
+	position: $relativo;
+	top: $top0;
+	left: $left0;
+	bottom: $bottom; 
+	rigth: $rigth;
+}
